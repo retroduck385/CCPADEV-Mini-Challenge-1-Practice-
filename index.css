@@ -22,6 +22,85 @@ body {
     box-shadow: 0px 4px 10px -4px #C1ACBA;
     border-radius: 10px;
     border: 1px solid var(--border);
-
-    background-color: blanchedalmond;
+    display: grid;
+    grid-template-columns: 70% 30%;
+    grid-template-areas:
+    "main sidebar";
 }
+
+.main-container{
+    grid-area: main;
+    background-color:#363636;
+}
+
+.side-container{
+    grid-area: sidebar;
+    display: grid;
+    grid-template-rows: 40% 60%;
+    grid-template-areas:
+    "post"
+    "comments";
+}
+
+.post-container{
+    grid-area: post;
+    padding: 20px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    flex-direction:column;
+}
+
+.post-heading p, .post-heading a{
+    display: inline;
+    font-size: 1.5rem;
+}
+
+.post-heading a:link{
+    color:#F87D42; /* Normal unvisited links */
+
+}
+.post-heading a:visited{
+    color:#F87D42; /* Links that have been visited */
+
+}
+.post-heading a:active {
+    color: #F87D42; /* Links when actively clicked */
+}
+
+.post-date p{
+    font-size: 1.3rem;
+    font-style: italic;
+    font-weight: 300;
+    margin-top: 0px;
+}
+
+.post-desc p{
+    font-size: 1 rem;
+    display: inline;
+    margin-top: 10px;
+}
+
+.post-action-icons{
+    display: flex;
+}
+
+.post-action-icons img{
+    width: 32px;
+    height: 32px;
+}
+
+.comment-container{
+    grid-area: comments;
+    color: #f8f8f8;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.comment-container p{
+    color: #535353;
+    font-size: 1rem;
+
+}
+
